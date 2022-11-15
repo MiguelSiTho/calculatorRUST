@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     println!("enter a number for x:");
     let mut input1 = String::new();
@@ -16,11 +18,11 @@ fn main() {
     io::stdin()
          .read_line(&mut input3)
          .expect("Failed to read input");
-         
+     
     let x: f64 = input1.trim().parse().expect("error");
     let y: f64 = input2.trim().parse().expect("error");
     let w: i32 = input3.trim().parse().expect("error");
-    
+
     match w{
         1=> println!("{} + {} = {}", x , y,  x + y),
         2=> println!("{} - {} = {}", x , y,  x - y),
